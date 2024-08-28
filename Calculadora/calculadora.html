@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body {
+            background-color: #1E1B3A;
+            font-family: Arial, sans-serif;
+            color: #A5B4FC;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #362D59;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+            width: 700px;
+        }
+
+        .title {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group select, 
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4C3C7B;
+            color: #A5B4FC;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        .form-group input[type="date"] {
+            color: #A5B4FC;
+            appearance: none;
+            -webkit-appearance: none;
+            position: relative;
+        }
+
+        .form-group input[type="date"]::-webkit-calendar-picker-indicator {
+            filter: invert(1); 
+            opacity: 0.6;
+        }
+
+        .form-group input[type="date"]:hover::-webkit-calendar-picker-indicator {
+            opacity: 1;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #6B5BD4;
+            color: #FFF;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #5A49B1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Calculadora</div>
+        <form>
+            <div class="form-group">
+                <label for="equipamento">Equipamento</label>
+                <select id="equipamento">
+                    <option value="">Selecione</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="bandeira">Bandeira</label>
+                <select id="bandeira">
+                    <option value="">Selecione</option>
+                    <option value="verde">Bandeira Verde</option>
+                    <option value="amarela">Bandeira Amarela</option>
+                    <option value="vermelha1">Bandeira vermelha - Patamar 1</option>
+                    <option value="vermelha2">Bandeira vermelha - Patamar 2</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="horas">Horas de uso</label>
+                <input type="number" id="horas" placeholder="Horas de uso">
+            </div>
+            <div class="form-group">
+                <label for="dia">Dia hoje</label>
+                <input type="date" id="dia">
+            </div>
+            <div class="form-group">
+                <label for="custo">Custo do W/kg</label>
+                <input type="number" id="custo" placeholder="Custo do W/kg">
+            </div>
+            <div class="form-group">
+                <label for="tipo">Tipo</label>
+                <select id="tipo">
+                    <option value="">Selecione</option>
+                    <option value="residencial">Residencial</option>
+                    <option value="comercial">Comercial</option>
+                    <option value="industrial">Industrial</option>
+                </select>
+            </div>
+            <button type="submit" class="btn">Calcular</button>
+        </form>
+    </div>
+</body>
+</html>
